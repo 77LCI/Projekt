@@ -1,0 +1,85 @@
+<html>
+<head>
+<meta charset=UTF-8>
+<style>
+
+body {
+  background-image: url('car_dealer.jpg');
+}
+
+.container {
+position: relative;
+left: 640px;
+top: 200px;
+background-color: #68B1B1;
+border: 2px solid;
+width: 400px;
+}
+
+.btn-group button {
+  background-color: #F1F1F1;
+  border: 3px gray; 
+  color: black; 
+  padding: 10px 12px; /* Some padding */
+  cursor: pointer; 
+  width: 10%; 
+  display: block; 
+  border-style: solid;
+}
+
+.btn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #ADC1C1;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 16px;
+  border: 5px;
+  border-style: double;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.fooldal {
+  background-color: #f1f1f1;
+  color: black;
+  position: relative;
+  left: 1050px;
+  top: 230px;
+  border: 2px solid;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1> Válasszon autót!</h1>
+<form action="auto_kereses.php" method=post>
+Autó típusa (csaladi / sport / suv): <input type="text" name="auto_tipus"><br>
+Üzemanyag (benzin/ dizel): <input type="text" name="uz_tipus"><br>
+Meghajtás (FWD / AWD / RWD): <input type="text" name="meghajtas"><br>
+Minimum lóerő: <input type="text" name="min_hp"><br>
+Ülések száma (2 / 5 / 7): <input type="text" name="ulesek"><br>
+<input type="submit" value="Keresés">
+
+</div>
+
+</div>
+
+<a href="fooldal.html" class="fooldal">&laquo; Főoldal</a>
+
+</body>
+
+</body>
+</html>

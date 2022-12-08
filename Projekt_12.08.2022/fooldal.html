@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8>
+<style>
+
+body {
+  background-image: url('f1.jpg');
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+.slider {
+     width: 1500px;
+     height: 900px;
+     background-color: yellow;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 10px;
+     text-align: center;
+     overflow: hidden;
+ }
+.image-container {
+     width: 4500px;
+     background-color: pink;
+     height: 900px;
+     clear: both;
+     position: relative;
+     -webkit-transition: left 2s;
+     -moz-transition: left 2s;
+     -o-transition: left 2s;
+     transition: left 2s;
+}
+.slide {
+     float: left;
+     margin: 0px;
+     padding: 0px;
+     position: relative;
+}
+#slide-1:target ~ .image-container {
+     left: 0px;
+}
+#slide-2:target ~ .image-container {
+     left: -1500px;
+}
+  #slide-3:target ~ .image-container {
+    left: -3000px;
+}
+.buttons {
+    position: relative;
+    top: -30px;
+}
+.buttons a {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+	border-radius: 50px;
+	background-color: #04AA6D;
+}
+
+li input{
+ float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style the search field */
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 10%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 2%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="fooldal.html">Főoldal</a></li>
+  <li><a href="Audi.html">Audi</a></li>
+  <li><a href="Bmw.html">BMW</a></li>
+  <li><a href="#contact">Mazda</a></li>
+  <li><a href="auto_kereses.html">Autó keresés</a></li>
+  <li style="float:right"><a href="login.html">Kilépés</a></li>
+</ul>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<form class="example" action="kereses.php" method=post>
+  <input type="text" placeholder="Keresés..." name="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+
+<div class="slider">
+      <span id="slide-1"></span>
+      <span id="slide-2"></span>
+      <span id="slide-3"></span>
+      <div class="image-container">
+        <img src="fo7.jpg" class="slide" width="1500" height="900" />
+        <img src="fo11.webp" class="slide" width="1500" height="900" />
+        <img src="fo9.jpg" class="slide" width="1500" height="900" />
+      </div>
+      <div class="buttons">
+        <a href="#slide-1"></a>
+        <a href="#slide-2"></a>
+        <a href="#slide-3"></a>
+      </div>
+    </div>
+
+</body>
+</html>
